@@ -41,3 +41,4 @@ print(f"Best x: {best_x}")
 print(f"Maximum value of f(x): {best_f}")
 
 
+
