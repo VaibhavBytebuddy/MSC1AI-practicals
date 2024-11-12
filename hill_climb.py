@@ -6,6 +6,8 @@ Created on Mon Oct 21 10:12:20 2024
 @author: vaibhav
 """
 
+'''
+
 import random
 
 # Define the function we want to maximize
@@ -39,6 +41,32 @@ best_x, best_f = hill_climbing(start, step_size, max_iterations)
 # Output the results
 print(f"Best x: {best_x}")
 print(f"Maximum value of f(x): {best_f}")
+
+'''
+import random
+
+def f(x):
+    return x*2+x**2
+
+def hill(start,steps,maxI):
+    curr_x=start
+    curr_f=f(curr_x)
+
+
+    for _ in range(maxI):
+        next_x=curr_x+random.choice([-steps,steps])
+        next_f=f(next_x)
+
+        if next_f>curr_f:
+            curr_f,curr_x=next_f,next_f
+
+
+    return curr_x,curr_f
+
+
+a,b=hill(1,0.1,20)
+
+print(f"a= ",a, "b= ",b )
 
 
 
